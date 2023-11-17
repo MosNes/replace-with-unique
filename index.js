@@ -30,3 +30,7 @@ while( position !== -1 ) {
 }
 
 console.log(`Finished searching document. Replaced ${increment-1} instances of ${searchString}.`);
+
+console.log(`Saving copy of file...`)
+
+fs.writeFileSync(path.resolve(__dirname, filePath), fileText, 'utf8');
